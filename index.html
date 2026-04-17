@@ -6,22 +6,33 @@
     <title>Jogos Bíblicos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
-  window.pixelId = "69de6d5d1b26a57b71da415e";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
+      window.addEventListener("load", function () {
+        var loadTrackingScripts = function () {
+          var utms = document.createElement("script");
+          utms.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+          utms.async = true;
+          utms.defer = true;
+          utms.setAttribute("data-utmify-prevent-xcod-sck", "");
+          utms.setAttribute("data-utmify-prevent-subids", "");
+          document.head.appendChild(utms);
+
+          window.pixelId = "69d92842c3d7adf3c4b111e7";
+          var pixel = document.createElement("script");
+          pixel.async = true;
+          pixel.defer = true;
+          pixel.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+          document.head.appendChild(pixel);
+        };
+
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(loadTrackingScripts, { timeout: 2500 });
+        } else {
+          setTimeout(loadTrackingScripts, 1200);
+        }
+      });
+    </script>
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
   </head>
